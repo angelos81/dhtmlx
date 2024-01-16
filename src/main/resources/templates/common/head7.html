@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>테스트 사이트</title>
+    <link id='cssSearchDhtmlx'   rel='stylesheet' type='text/css' href='/css/search.css?v=202302'>
+    <link id='cssGridDhtmlx'   rel='stylesheet' type='text/css' href='/css/grid.css?v=202302'>
+    <script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    const rootPath = "[(${@environment.getProperty('globals.rootPath')})]";
+    const gMenuCode = [[${param.menu_code==null?'':#strings.defaultString(param.menu_code[0],'')}]];
+    /*]]>*/
+    </script>
+    <script th:src="@{/js/includeDhtmlx7.js}"></script>
+</head>
+</html>

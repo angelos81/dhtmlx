@@ -1,0 +1,8 @@
+{
+  "options": [
+    {"value": "" , "text": "선택", "selected":"true"},
+    {"value": "NEW", "text": "신규"  },
+    {"value": "MOD", "text": "변경"  },
+    {"value": "DEL", "text": "삭제"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "options": [
+    {"value": "" , "text": "선택", "selected":"true"},
+    {"value": "Y", "text": "Y"  },
+    {"value": "N", "text": "N"}
+  ]
+}

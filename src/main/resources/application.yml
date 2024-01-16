@@ -1,0 +1,20 @@
+spring:
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: "/"
+
+#globals
+globals:
+  charset: UTF-8
+  systemName: ???? ??? ??? ???
+  systemOperator: ?????
+  rootPath: ""
+  security:
+    useYn: N
+  testLoginUseYn: "Y"

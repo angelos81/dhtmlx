@@ -1,0 +1,15 @@
+[
+    {id: 1, text: "기준정보", open: 1, items: [
+        {id: 11, text: "시스템 관리", 	   userdata: {url:"/mng/system/init.do"}},
+        {id: 12, text: "젠킨스 서버 관리",   userdata: {url:"/mng/jenkins/init.do"}},
+        {id: 13, text: "SCM 관리",   userdata: {url:"/mng/scm/init.do"}},
+        {id: 14, text: "배포정보 관리",   userdata: {url:"/mng/deployInfo/init.do"}}
+    ]},
+    {id: 2, text: "배포관리", open: 1, items: [
+        {id: 21, text: "배포작업 요청",  userdata: {url:"/run/deployReq/init.do"}}
+    ]},
+    {id: 3, text: "시스템관리", open: 0, items: [
+        {id: 31, text: "사용자 관리",      userdata: {url:"/admin/user/init.do"}},
+        {id: 32, text: "코드 관리",       userdata: {url:"/admin/code/init.do"}}
+    ]}
+]

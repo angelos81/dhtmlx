@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${@environment.getProperty('globals.systemName')}">테스트 사이트</title>
+</head>
+<style>
+    div#layoutObj {
+        position: relative;
+    }
+    .subMain {
+        padding:20px 0;
+        text-align:center;
+        font-size:1.16em;
+        font-weight:bold;
+        color:#00704a;
+        margin-top: 40px;
+        margin-bottom:40px;
+    }
+    .subMain img {
+        display:block;
+        margin:0 auto 20px;
+    }
+    .contents {
+        position:relative;
+        width:100%;
+        height:100%;
+    }
+    img {
+        border:0;
+        padding:0;
+        margin:0;
+        vertical-align:top;
+        display:inline-block;
+    }
+
+</style>
+<body> 
+    <div class="contents subMain">
+        <img alt="테스트 관리자 사이트에 오신것을 환영합니다." th:src="|${@environment.getProperty('globals.rootPath')}/images/home/sb_logo.jpg|" width="389" height="389">
+        테스트 사이트에 오신것을 환영합니다.
+    </div>
+</body>
+</html>

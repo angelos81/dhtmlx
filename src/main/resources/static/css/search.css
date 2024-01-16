@@ -1,0 +1,169 @@
+/* 검색 폼 행 */
+.searchForm.dhx_form .dhx_layout-cell {
+    margin-bottom: -1px;
+}
+
+/* 검색 폼 Item (label + input) */
+.searchForm.dhx_form .dhx_form-element .dhx_form-group {
+    /*background-color: #eeeeee;
+    border: 1px solid #484848;*/
+    margin-bottom: 0px;
+}
+
+/* 검색폼 label */
+.searchForm.dhx_form .dhx_form-element.search-label {
+    background-color: #eeeeee;
+    border: 1px solid #484848;
+    margin-right: -1px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label:nth-of-type(n+1) {
+    background-color: #eeeeee;
+    border: 1px solid #484848;
+    margin-right: -1px;
+    margin-left: -1px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label-w {
+    background-color: #ffffff;
+    border: 0px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label .dhx_form-group .dhx_label {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#666666;
+    margin-top : 9px;
+    margin-left : 6px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label-w .dhx_form-group .dhx_label {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#666666;
+    margin-top : 9px;
+    margin-left : 6px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label .dhx_form-group .dhx_input__wrapper {
+    display: none;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-label-w .dhx_form-group .dhx_input__wrapper {
+    display: none;
+}
+
+/* 검색폼 input*/
+.searchForm.dhx_form .dhx_form-element.search-input {
+    background-color: #ffffff;
+    border: 1px solid #484848;
+    padding: 5px;
+}
+
+.searchForm.dhx_form .search-group .dhx_form-element.search-input {
+    background-color: #ffffff;
+    border: 0px;
+    padding: 5px;
+}
+
+.searchForm.dhx_form .dhx_form-element.search-input .dhx_form-group .dhx_label {
+    display: none;
+}
+
+/* 검색폼 그룹 */
+.searchForm.dhx_form .search-group {
+    background-color: #ffffff;
+    border: 1px solid #484848;
+}
+
+.searchForm.dhx_form .search-group .dhx_layout-cell {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+/* 검색 폼 radio 버튼 */
+.searchForm.dhx_form .dhx_radiobutton__visual-input {
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* 메인 타이틀 */
+.sp-title .main-title {
+    overflow: hidden !important;
+}
+.sp-title .main-title .title .popTitle {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 14px;
+    color:#036635;
+}
+
+/* 서브 타이틀 */
+.sp-title .sub-title {
+    overflow: hidden !important;
+}
+.sp-title .sub-title .title .popTitle {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 13px;
+    color:#036635;
+}
+
+/* 조회 버튼 */
+.sp-title .main-title .search-btn {
+    width:43px;
+    height:23px;
+    background-color: #484848;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+
+.sp-title .main-title .search-btn button {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#ffffff;
+    background-color: #484848;
+    padding: 0px;
+    width:100%;
+    height:100%;
+}
+
+/* 일반 버튼 */
+.sp-title .normal-btn {
+    height:23px;
+    background-color: #484848;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.sp-title .normal-btn button {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#ffffff;
+    background-color: #484848;
+    padding: 0px;
+    width:100%;
+    height:100%;
+}
+
+.frequency-form .normal-btn {
+    height:23px;
+    background-color: #484848;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.frequency-form .normal-btn button {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#ffffff;
+    background-color: #484848;
+    padding: 0px;
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,7 @@
+{
+  "options": [
+    {"value": "" , "text": "전체", "selected":"true"},
+    {"value": "stg", "text": "스테이징(개발)"  },
+    {"value": "live", "text": "운영"}
+  ]
+}

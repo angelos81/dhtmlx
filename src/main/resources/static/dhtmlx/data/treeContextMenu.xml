@@ -1,0 +1,6 @@
+<?xml version='1.0' ?>
+<menu id="0">
+    <item id="new"    img="/images/dhtmlx/menu/newwin.gif" imgdis="/images/dhtmlx/menu/newwin_dis.gif" text="새창에서..."/>	
+    <item id="sep_top_1" type="separator"/>
+    <item id="newTab" img="/images/dhtmlx/menu/newtab.gif" imgdis="/images/dhtmlx/menu/newtab_dis.gif" text="새탭에서..."/>	
+</menu>

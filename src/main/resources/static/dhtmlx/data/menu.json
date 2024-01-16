@@ -1,0 +1,5 @@
+[  
+    {id: 2, text: "배포관리", open: 1, items: [
+        {id: 21, text: "배포작업 요청",  userdata: {url:"/run/deployReq/init.do"}}
+    ]}
+]

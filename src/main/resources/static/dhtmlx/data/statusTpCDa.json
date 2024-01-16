@@ -1,0 +1,7 @@
+{
+  "options": [
+    {"value": "" , "text": "전체", "selected":"true"},
+    {"value": "COMPLETED", 	"text": "완료"  },
+    {"value": "FAILED", 	"text": "실패"}
+  ]
+}

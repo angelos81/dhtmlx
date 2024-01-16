@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item id="excel"  img="/images/grid/ico_xls_18.gif" text="Excel" />
+	<item id="sep_top_1" type="separator" />
+	<item id="pdf"    img="/images/grid/ico_pdf_18.gif" text="Pdf" />
+</menu>

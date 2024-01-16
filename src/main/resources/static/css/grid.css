@@ -1,0 +1,62 @@
+/* grid 헤더 */
+.sp-grid .dhx_header-row {
+    background: #eeeeee;
+}
+
+.sp-grid .dhx_header-row .dhx_grid-header-cell-text_content {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-weight: bold;
+    font-size: 12px;
+    color:#666666;
+}
+
+/* grid 데이터 */
+.sp-grid .dhx_data-wrap .dhx_grid-cell__content {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-size: 12px;
+    color:#666666;   
+}
+
+/* pagenation*/
+.pagination .page-item {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-size: 11px!important;
+    color:#666666!important;
+    background-color: #ffffff!important;
+    border-color: #484848!important;
+}
+
+.pagination .page-item .page-link {
+    font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+    font-size: 11px!important;
+    color:#666666!important;
+    background-color: #ffffff!important;
+    border-color: #484848!important;
+}
+
+.pagination .page-item.disabled .page-link{
+    background-color: #eeeeee!important;
+}
+
+.pagination .page-item.first .page-link{
+    font-weight: bold;
+}
+
+.pagination .page-item.prev .page-link{
+    font-weight: bold;
+}
+
+.pagination .page-item.next .page-link{
+    font-weight: bold;
+}
+
+.pagination .page-item.last .page-link{
+    font-weight: bold;
+}
+
+.pagination .active>.page-link {
+    font-weight: bold;
+    color:#ffffff!important;
+    background-color: #036635!important;
+    border-color: #484848!important;
+}

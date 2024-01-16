@@ -1,0 +1,6 @@
+{
+  "options": [
+    {"value": "Y", "text": "사용", "selected":"true"},
+    {"value": "N", "text": "미사용"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+    "options": [
+      {"value": "C", "text": "일반 허용", "selected":"true"},
+      {"value": "V", "text": "VDI 허용"},
+      {"value": "P", "text": "VPN 허용"},
+      {"value": "S", "text": "슈퍼유저 전용"}
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "options": [
+    {"value": "" , "text": "선택", "selected":"true"},
+    {"value": "ADMIN", "text": "관리자"  },
+    {"value": "OPER", "text": "운영자"}
+  ]
+}

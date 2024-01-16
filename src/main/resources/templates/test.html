@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/head7 :: head}"><title>스타벅스 리워드 관리 사이트</title></head>
+
+<style>
+    .grid_del_row {
+        background-color: #FF6347;
+    }
+</style>
+
+<script type="text/javascript" th:inline="javascript">
+    var layoutMain;
+    var searchTitle;
+    var frmMain;
+    var frmTitle;
+    var gridMain;
+    var dcGridMain;
+
+
+    $(function(){
+        layoutMain = new dhx.Layout("layoutObj", {
+            rows: [
+                {id: "searchTitle", height: 46, collapsable: false, resizable: false, css: "sp-title"},
+                {id: "frmMain", height: 60, collapsable: false, resizable: false},
+                {id: "frmTitle", height: 46, collapsable: false, resizable: false, css: "sp-title"},
+                {id: "gridMain"},
+                {id: "gridPagination", height: 40}
+            ]
+        });
+
+        // title
+        searchTitle = new dhx.Form(null, {
+            rows: [
+                { cols: [
+                            {type: "container",	 padding: "0px 3px",  height: "content", width: 654, disabled: false, html :'<div class="title" style="margin:10px 0px;""><span class="popTitle">▶ 템플릿 조회</span> </div>'},
+                            {cols : [
+                                        {type: "button", id: "btnSearch1", label:"조회1", text: "조회1", size : "medium", color : "secondary", view : "flat", css:"search-btn" },
+                                        {type: "button", id: "btnSearch2", label:"조회2", text: "조회2", size : "medium", color : "secondary", view : "flat", css:"search-btn" }
+                                    ]
+                            }
+                      ]
+                    , align:"left"
+                }
+            ],
+            css: "main-title"
+        });
+        layoutMain.getCell("searchTitle").attach(searchTitle);
+
+
+        // 검색폼
+        frmMain = new dhx.Form(null, {
+            rows: [
+                {
+                    cols: [
+                        {type: "text", label: "템플릿명", width: 110, css: "search-label"},
+                        {type: "input", id: "templateName", name: "templateName", width: 240, css: "search-input"},
+                        {type: "text", label: "템플릿코드", width: 110, css: "search-label"},
+                        {type: "input", id: "templateCode", name: "templateCode", width: 240, css: "search-input"}
+                    ]
+                }
+            ]
+            , css: "searchForm"
+        });
+        layoutMain.getCell("frmMain").attach(frmMain);
+
+
+        // 엑셀폼
+        frmTitle = new dhx.Form(null, {
+            rows: [
+                {
+                    cols: [
+                        {type: "container",	height: "content", width: "50%", disabled: false, html :'<div class="title" style="margin:10px 0px;"><span class="popTitle"> </span> </div>'},
+                        {type: "button", id: "btnExcelDownload", text: "엑셀 다운로드", css: "normal-btn"},
+                        {type: "button", id: "btnExcelUpload", text: "엑셀 업로드", css: "normal-btn"},
+                        {type: "select", id: "selPerPage", name: "selPerPage", width: 100,
+                            options: [
+                                {value: "20", content: "20개"},
+                                {value: "50", content: "50개"},
+                                {value: "100", content: "100개"}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        });
+        layoutMain.getCell("frmTitle").attach(frmTitle);
+
+
+        // 데이터 그리드
+        dcGridMain = new dhx.DataCollection();
+        gridMain = new dhx.Grid(null, {
+            columns: [
+                {id: "no", header: [{ text: "No", align:"center"}], gravity: 2, align: "center"},
+                {id: "ntftkTmpltChnlId", header: [{ text: "@채널", align:"center"}], gravity: 5, align: "center"},
+                {id: "ntftkMpngId", header: [{ text: "매핑ID", align:"center"}], gravity: 5, align: "center"},
+                {id: "ntftkTmpltCode", header: [{ text: "템플릿코드", align:"center"}], gravity: 5, align: "center", htmlEnable: true, template: function(text, row) {
+                        return `<a href="javascript:fn_openTemplateDetailPopup('${row.ntftkSrviId}')">${text}</a>`;
+                    }},
+                {id: "ntftkTmpltName", header: [{ text: "템플릿명", align:"center"}], gravity: 16, align: "center"},
+                {id: "ntftkTmpltTypeName", header: [{ text: "템플릿유형", align:"center"}], gravity: 5, align: "center"},
+                {id: "scrtyTmpltTypeCode", header: [{ text: "보안템플릿", align:"center"}], gravity: 5, align: "center"},
+                {id: "rgsttDtm", header: [{ text: "등록일자", align:"center"}], gravity: 10, align: "center"},
+                {id: "ntftkSrviId", header: [{ text: ""}], hidden: true}
+            ],
+            data:dcGridMain,
+            headerRowHeight : 40,
+            autoWidth: true,
+            sortable: false,
+            tooltip: false,
+            css:"sp-grid"
+        });
+        layoutMain.getCell("gridMain").attach(gridMain);
+
+
+    });
+</script>
+
+<body style="overflow:auto">
+<div id="wrapper">
+    <div id="centerWrap">
+        <div id="appAreaWrap">
+            <div id="appArea">
+                <div id="layoutObj"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

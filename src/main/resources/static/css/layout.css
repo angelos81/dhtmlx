@@ -1,0 +1,632 @@
+﻿@charset "UTF-8"; 
+@font-face {
+	font-family:'Nanum Gothic';
+    font-style: normal;
+ 	font-weight: 400;
+	src: url('../fonts/NanumGothic.eot');
+ 	src: url('../fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NanumGothic.woff') format('woff'),
+		url('../fonts/NanumGothic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family:'Nanum Gothic';
+    font-style: normal;
+ 	font-weight: 700;
+	src: url('../fonts/NanumGothic-Bold.eot');
+ 	src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NanumGothic-Bold.woff') format('woff'),
+		url('../fonts/NanumGothic-Bold.ttf') format('truetype');
+}
+
+
+
+/*******************************************************************************
+  erp app template Page Layout - 수정 // #505050 #404040
+*******************************************************************************/
+
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', 'Nanum Gothic', 'Roboto', sans-serif;
+	line-height: 16px;
+}
+.logo-wrap {
+	float:left; 
+	width:140px;
+	height:37px;
+	left:50%; 
+	margin:10px 
+}
+.logo-wrap img {
+	width:100%; 
+	max-height:100%
+}
+
+#wrapper {
+    position:relative;
+    width:100%;
+    height:calc(100% - 17px);
+}
+
+#mainWrapper {
+	position:relative;
+    width:100%;
+    height:100%;
+}
+
+#header {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:35px;
+    background:#036635;
+    z-index:4;
+    min-width: 920px;
+	color:white;
+}
+#centerWrap {
+    height:100%;
+}
+
+#leftMenuAreaWrap {
+	overflow:hidden;
+    position:absolute;
+    width:219px;
+    height:100%;
+    background:#ffffff;
+
+    z-index:2;
+    border-right: 1px solid #b4b4b4;
+}
+#leftMenuArea {
+    overflow:auto;
+    position:relative;
+    height:90%;
+    margin:54px 0px 24px 5px; 
+}
+#appAreaWrap {
+    padding:0px 0 0px 0px;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid blue;
+}
+#appRoleArea {
+    top:0px;
+    left:0px;
+    z-index:1;
+    width:100%;
+    padding-top:8px;
+    height:36px;
+}
+#appArea {
+    z-index:1;
+    overflow:auto;
+    min-height: 200px;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid red;
+}
+
+#mainAreaWrap {
+    padding:34px 0px 0px 0px;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid blue;
+}
+#mainArea {
+    z-index:1;
+    overflow:hidden;
+    min-height: 200px;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid red;
+}
+
+#appPopupAreaWrap {
+    padding:0 0 44 0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid blue;
+}
+#appPopupRoleArea {
+    top:0px;
+    left:0px;
+    z-index:1;
+    width:100%;
+    padding-top:8px;
+    height:36px;
+}
+#appPopupArea {
+    z-index:1;
+    overflow:auto;
+    min-height: 200px;
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    border:0px solid red;
+}
+
+#footer {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height:18px;
+    background:#505050;
+    z-index:3;
+}
+
+#layoutObj {
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+    border:0px solid red;
+}
+
+#layoutAppObj {
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+    border:0px solid red;
+    position: relative;
+}
+
+/* 화면 타이틀 영역 */ 
+.title_area_wrap{
+    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.role_title{
+	 font-size: 16px; 
+	 font-weight: bold;
+	 color: #515151;
+	 float:left;
+	 padding: 5 0 0 5;
+}
+
+/* 화면 공통 버튼 정의 */ 
+.role_btn_area{ 
+	 float:right;
+	 padding: 0 5 2 0;
+}
+.button-default{
+	background-color: #596f8c;
+	padding: 4 5 4 5px;
+}
+
+.pure-button{ 
+	background-color: #565e6d;
+	font-size: 12px;
+	padding: 4px 14px;
+	color: #fff;
+	border:0px;
+}
+.pure-button:hover{ 
+	background-color: #828da2;
+}
+.pure-button:active{ 
+	background-color: #697385;
+}
+
+.checkbox-all{
+    margin-top: 5px;
+	width:16px; 
+	height:16px;
+    align:center;
+}
+
+/* header 우측메뉴 */
+.header_right{ 
+	margin:0;
+	padding:0;
+	float: right; 
+	height: 100%;
+	letter-spacing: 1px;
+}
+
+.header_menu{	
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+.header_username,.header_userinfo,.header_logout{
+	border-left: 0 !important;
+}
+.header_menu li{ 
+	float: left;
+	color: #fff;
+	border:0px;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: 'Malgun Gothic', 'Nanum Gothic';
+	height: 70%;
+	padding: 8px 12px 0 12px;
+}
+
+.header_menu li a{
+	text-decoration:none;
+}
+
+.header_userinfo a{
+	color: white !important;
+	border:0px;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.header_userinfo a:hover,
+.header_userinfo a:active{
+	color: #839195 !important;
+	text-decoration:underline !important;
+}
+
+.header_logout a{
+	background-color: #fff;
+	font-weight: 400;
+	color: #777f90;
+	border:1px solid #777f90;
+	border-radius: 3px;
+	font-size:12px;
+	padding: 3px 6px;
+}
+
+.header_logout a:active{
+	color: #e5e5e5;
+}
+
+.header_username,.header_userinfo,.header_logout{
+	border-left: 0 !important;
+}
+
+.header_scheduler{
+ 	text-align:center;
+	color: #bebebe;
+	border:0px;
+	border-left: 1px solid #606060;
+
+}
+
+.header_scheduler:hover,
+.header_scheduler:active{
+	background-color: #252525;
+	text-align:center;
+	color: #bebebe;
+	border-left: 1px solid #606060;
+}
+
+.header_mymenu{
+	text-align:center;
+	color: #bebebe;
+	border:0px;
+
+}
+.header_mymenu:hover,
+.header_mymenu:active{
+	background-color: #252525;
+	text-align:center;
+	color: #fff;
+	border-left: 1px solid #606060;
+}
+
+.header_scheduler a:hover,
+.header_scheduler a:active{
+	color: #ececec;
+	}
+	
+.header_mymenu a:hover,
+.header_mymenu a:active{
+	color: #ececec;
+	}
+
+.header_whole:hover,
+.header_whole:active{
+	background-color: #252525;
+	text-align:center;
+	color: #ececec;
+	border-left: 1px solid #606060;
+}
+
+.wholemenu{
+
+	padding-top:2px;
+	font-size: 1.7em;
+	color:#bebebe;
+}
+
+.wholemenu:hover,
+.wholemenu:active{
+	color: #ececec;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+/* footer */
+.footer_area{
+	width:100%;
+	margin-top: 2px; 
+	color: #ffffff;
+	font-family: 'Malgun Gothic', Nanum Gothic, Dotum;
+	font-size: 11px;
+	overflow-x: hidden; 
+	position: absolute; 
+	left:0;
+	bottom:0;
+}
+.s_skyblue{ 
+	display: inline-block;
+	width: 80px;
+    height: 20px; 
+	padding: 2px 5px 2px 5px;
+	font-size: 12px;
+	color: #7ee0fd;
+	background-color: #505050;
+	border: 1px solid #42b8de;
+	text-align: center;
+}
+.s_skyblue:hover,
+.s_skyblue:active{ 
+	background-color: #43b7de;
+    color: #505050;
+    border: 1px solid #42b8dc;
+}
+
+.s_web{ 
+	display: inline-block;
+	width: 72px;
+    height: 20px; 
+	padding: 2px 5px 2px 5px;
+	font-size: 12px;
+	color: #fd658e;
+	background-color: #505050;
+	border: 1px solid #f3488c;
+	text-align: center;
+	margin-right: 55px;
+}
+.s_web:hover,
+.s_web:active{ 
+	background-color: #f6488f;
+    color: #505050;
+    border: 1px solid #f1488d;
+}
+
+
+/* dhxform input, 이미지 button 간격 및 줄맞춤 템플릿  dhx_skyblue, dhx_web*/
+div.dhxform_item_label_left.dhxformButtondhx_skyblue div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+/* dhxform 이미지 button */
+div.dhxform_item_label_left.dhxformButtondhx_skyblue div.dhxform_btn_txt  {
+	background-image: url('../images/dhtmlx/paging/dhx_skyblue/zoom.png');
+	background-repeat: no-repeat;
+	background-position: 1px 2px;
+	padding-left: 21px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* dhxform input, 이미지 button 간격 및 줄맞춤 템플릿  */
+div.dhxform_item_label_left.dhxformButtondhx_web div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+/* dhxform 이미지 button */
+div.dhxform_item_label_left.dhxformButtondhx_web div.dhxform_btn_txt  {
+	background-image: url('../images/dhtmlx/paging/dhx_web/zoom.png');
+	background-repeat: no-repeat;
+	background-position: 1px 2px;
+	padding-left: 21px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.dhxform_item_label_left.formButtondhx_skyblue div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+/* dhxform button */
+div.dhxform_item_label_left.formButtondhx_skyblue div.dhxform_btn_txt  {
+	padding-left: 21px;
+	line-height:22px;
+	margin: 0px 20px 0px 0px;
+}
+
+/* button 간격 및 줄맞춤 템플릿  dhx_skyblue, dhx_web*/
+div.dhxform_item_label_left.formButtondhx_web div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+/* dhxform button */
+div.dhxform_item_label_left.formButtondhx_web div.dhxform_btn_txt  {
+	padding-left: 21px;
+	line-height:22px;
+	margin: 0px 20px 0px 0px;
+}
+
+/* button 간격 및 줄맞춤 템플릿  dhx_skyblue, dhx_web*/
+div.dhxform_item_label_left.formButtondhx_terrace div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+/* dhxform button */
+div.dhxform_item_label_left.formButtondhx_terrace div.dhxform_btn_txt  {
+	padding-left: 21px;
+	line-height:22px;
+	margin: 0px 20px 0px 0px;
+}
+
+div.dhxform_obj_dhx_skyblue div.dhxform_txt_label2 {
+	padding:2px 0px !important;
+}
+
+div.dhxform_obj_dhx_web div.dhxform_txt_label2 {
+	padding:0px 0px !important;
+}
+
+div.offsetLeft{
+	margin-left: 30px !important;
+}
+
+div.offsetRight{
+	margin-right: 30px !important;
+}
+
+div.offsetRightChkBox{
+	margin-right: 185px !important;
+}
+
+div.offsetRightButton{
+	margin-right: 20px !important;
+}
+
+div.offsetSearchRight{
+	margin-right: 11px !important;
+}
+
+div.inputTextAlignRight{
+	text-align:right;
+}
+
+div.labelMargin{
+	margin:0 0px !important;
+}
+
+div.dhxform_item_label_left.dhxformLabelBa div.dhxform_txt_label2  {
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+    overflow-x: hidden;
+    overflow: hidden;
+    white-space: normal;
+    font-weight:normal;
+}
+
+/* 메뉴 하단 스크롤 제거 */
+.standartTreeRow{
+	width:125px !important;
+}
+	
+div.hdrcell.filter div.combo {
+	padding-left:5px !important; 
+}	
+
+/* 그리드 해더 중앙 정렬*/
+div.gridbox.gridbox_dhx_skyblue table.hdr td{
+	vertical-align:middle;
+}
+
+div.gridbox.gridbox_dhx_skyblue table.hdr td div.hdrcell{
+	padding-left:0px;
+	text-align:center;
+}
+
+div.gridbox.gridbox_dhx_web {
+    width:100% !important;
+}
+
+div.gridbox.gridbox_dhx_web table.hdr td{
+	vertical-align:middle;
+}
+
+div.gridbox.gridbox_dhx_web table.hdr td div.hdrcell{
+	padding-left:0px;
+	text-align:center;
+}
+/* 그리드 해더 중앙 정렬*/
+
+/* 그리드 row 색상 수정*/
+div.gridbox_dhx_skyblue.gridbox table.obj tr.ev_dhx_skyblue {
+  background: #f6f7fd !important; 
+}
+/* 그리드 row 색상 수정*/
+
+/* dhxform 이미지 file down button */
+div.dhxform_item_label_left.dhxFileDownButtondhx_skyblue div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+div.dhxform_item_label_left.dhxFileDownButtondhx_skyblue div.dhxform_btn_txt  {
+	background-image: url('../images/dhtmlx/toolbar/dhx_skyblue/download.gif');
+	background-repeat: no-repeat;
+	background-position: 1px 2px;
+	padding-left: 21px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.dhxform_item_label_left.dhxFileDownButtondhx_web div.dhxform_btn {
+	height: 22px;
+	margin: 0px 0px 0px 5px;
+}
+div.dhxform_item_label_left.dhxFileDownButtondhx_web div.dhxform_btn_txt  {
+	background-image: url('../images/dhtmlx/toolbar/dhx_web/download.gif');
+	background-repeat: no-repeat;
+	background-position: 1px 2px;
+	padding-left: 21px;
+	margin: 0px 0px 0px 0px;
+}
+
+.ui-datepicker-calendar {
+    display: none;
+}
+
+.hideTab {
+	display: none;
+}
+
+.dhxtreeview_area .dhxtreeview_item_text .dhxtreeview_item_label {
+	color:#333333;
+	left: 20px !important;
+}
+
+.dhxtreeview_area .dhxtreeview_item_text .dhxtreeview_item_label:hover, .dhxtreeview_area .dhxtreeview_item_text_selected .dhxtreeview_item_label{
+	color:#006633;
+	font-weight: 700 !important;
+}
+
+.dhxtreeview_kids_cont .dhxtreeview_item_text .dhxtreeview_item_label {
+	color: #666666;
+	left: 22px !important;
+}
+
+.dhxtreeview_kids_cont .dhxtreeview_item_text .dhxtreeview_item_label:hover, .dhxtreeview_kids_cont .dhxtreeview_item_text_selected .dhxtreeview_item_label {
+	color:#006633;
+	font-weight: 700 !important;
+}

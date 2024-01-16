@@ -1,0 +1,9 @@
+{
+    "options": [
+      {"value": "" , "text": "선택", "selected":"true"},
+      {"value": "C", "text": "등록"},
+      {"value": "R", "text": "조회"},
+      {"value": "U", "text": "수정"},
+      {"value": "D", "text": "삭제"}
+    ]
+}

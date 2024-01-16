@@ -1,0 +1,89 @@
+
+.dhxtabbar_tabs.dhxtabbar_tabs_top {
+	width: 100%!important;
+	height: 27px!important;
+}
+
+.dhxtabbar_tabs_cont_left {
+    width: 100%!important;
+	height: 100%!important;
+}
+
+.dhxtabbar_tab_text.dhxtabbar_tab_text {
+	font-family: 'Malgun Gothic', 'Nanum Gothic'!important;
+	font-size: 12px!important;
+	color: #666666!important;
+    width: 100%!important;
+    font-weight: bold!important;
+}
+
+.dhxtabbar_tabs_top .dhxtabbar_tabs.dhxtabbar_tabs_top {
+	height: 27px!important;
+	background-color: #ffffff!important;
+}
+
+.dhxtabbar_tabs_top .dhxtabbar_tabs.dhxtabbar_tabs_top .dhxtabbar_tabs_base {
+	height: 27px!important;
+    width: 1610px!important;
+    margin-left:2px;
+}
+
+.dhxtabbar_tabs_cont_left .dhxtabbar_tab {
+	min-width: 60px!important;
+	height:25px!important;
+	background-color: transparent!important;
+    border: 1px solid #484848;
+}
+
+.dhxtabbar_tabs_cont_left .dhxtabbar_tab .dhxtabbar_tab_text.dhxtabbar_tab_text{
+	background-color: transparent!important;
+	min-width: 43px!important;
+	height:27px!important;
+	padding:0px!important;
+	position: absolute!important;
+	top: -8px!important;
+	left: 2px!important;
+	text-overflow : ellipsis!important;
+	color: #666666!important;
+}
+
+.dhxtabbar_tabs_cont_left .dhxtabbar_tab.dhxtabbar_tab_actv .dhxtabbar_tab_text.dhxtabbar_tab_text{
+	background-color: transparent!important;
+	min-width: 43px!important;
+	height:27px!important;
+	padding:0px!important;
+	position: absolute!important;
+	top: -8px!important;
+	left: 2px!important;
+	text-overflow : ellipsis!important;
+	color: #036635!important;
+}
+
+.dhxtabbar_tabs_cont_left .dhxtabbar_tab {
+	background-color: #ffffff!important;
+    margin-right: 2px!important;
+}
+
+.dhxtabbar_tabs_cont_left .dhxtabbar_tab.dhxtabbar_tab_actv {
+	background-color: #ffffff!important;
+}
+
+.dhxtabbar_tabs.dhxtabbar_tabs_top .dhxtabbar_tabs_ar_left {
+    height: 27px !important;
+    border: 1px solid #484848;
+    background-color: #ffffff!important;
+}
+
+.dhxtabbar_tabs.dhxtabbar_tabs_top .dhxtabbar_tabs_ar_left .dhxtabbar_arrow_img {
+    top: 6px!important;
+}
+
+.dhxtabbar_tabs.dhxtabbar_tabs_top .dhxtabbar_tabs_ar_right {
+    height: 27px !important;
+    border: 1px solid #484848;
+    background-color: #ffffff!important;
+}
+
+.dhxtabbar_tabs.dhxtabbar_tabs_top .dhxtabbar_tabs_ar_right .dhxtabbar_arrow_img {
+    top: 6px!important;
+}
