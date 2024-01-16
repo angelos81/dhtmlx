@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{common/head7 :: head}"><title>스타벅스 리워드 관리 사이트</title></head>
+<head th:replace="~{common/head7 :: head}"><title>테스트 사이트</title></head>
 
 <style>
     .grid_del_row {
@@ -112,6 +112,7 @@
         layoutMain.getCell("gridMain").attach(gridMain);
 
 
+        layoutMain.getCell("gridPagination").attachHTML("<ul class='pagination'  id='pagination'></ul>");
     });
 </script>
 

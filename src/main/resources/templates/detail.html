@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/head7 :: head}"><title>테스트 사이트</title></head>
+
+<style>
+    .grid_del_row {
+        background-color: #FF6347;
+    }
+</style>
+
+<script type="text/javascript" th:inline="javascript">
+    var layoutMain;
+    var searchTitle;
+    var frmMain;
+    var frmTitle;
+    var gridMain;
+    var dcGridMain;
+
+
+    $(function(){
+        layoutMain = new dhx.Layout("layoutObj", {
+            rows: [
+                {id: "frmSave", height: 46, collapsable: false, resizable: false, css: "sp-title"},
+                {id: "frmTemplate"}
+            ]
+        });
+
+
+
+
+    });
+</script>
+
+<body style="overflow:auto">
+<div id="wrapper">
+    <div id="centerWrap">
+        <div id="appAreaWrap">
+            <div id="appArea">
+                <div id="layoutObj"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

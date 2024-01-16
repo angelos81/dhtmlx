@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class TestController {
 
-    @GetMapping("/viewtest.do")
-    public String viewTest(HttpServletRequest request, Model model) {
-        return "test";
+    @GetMapping("/list.do")
+    public String viewList(HttpServletRequest request, Model model) {
+        return "list";
+    }
+
+    @GetMapping("/detail.do")
+    public String viewDetail(HttpServletRequest request, Model model) {
+        return "detail";
     }
 }
