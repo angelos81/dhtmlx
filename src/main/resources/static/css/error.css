@@ -168,32 +168,39 @@ body {
     width: 270px;
 }
 }
-@media only screen and (max-width: 320px)
-{
-.wrap {
-    width: 90%;
-}   
-.logo {
-    padding: 1% 1% 12% 1%;
-}
-.buttom {
-    width: 290px;
-}
-/***/
-.logo span {
-    font-size: 10px;
-    font-family: Nanum Gothic, Dotum;
-}
-.seach_bar p {
-    font-size: 1em;
-    margin: 1.5em 0em 2em 0em;
-}
-.logo span img {
-vertical-align: middle;
-}
-.logo img {
-    width: 200px;
-}
-.copy_right {
-    padding: 2em 0px 0px 0px;
+@media only screen and (max-width: 320px) {
+    .wrap {
+        width: 90%;
+    }
+
+    .logo {
+        padding: 1% 1% 12% 1%;
+    }
+
+    .buttom {
+        width: 290px;
+    }
+
+    /***/
+    .logo span {
+        font-size: 10px;
+        font-family: Nanum Gothic, Dotum;
+    }
+
+    .seach_bar p {
+        font-size: 1em;
+        margin: 1.5em 0em 2em 0em;
+    }
+
+    .logo span img {
+        vertical-align: middle;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .copy_right {
+        padding: 2em 0px 0px 0px;
+    }
 }
