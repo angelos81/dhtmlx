@@ -3,18 +3,16 @@
 <head th:replace="~{common/head7 :: head}"><title>테스트 사이트</title></head>
 
 <style>
-    .grid_del_row {
-        background-color: #FF6347;
+    .btn-mapping button{
+        width:100%;
+        height:100%;
     }
 </style>
 
 <script type="text/javascript" th:inline="javascript">
     var layoutMain;
-    var searchTitle;
-    var frmMain;
-    var frmTitle;
-    var gridMain;
-    var dcGridMain;
+    var frmSave;
+    var frmTemplate;
 
 
     $(function(){
@@ -25,8 +23,47 @@
             ]
         });
 
+        frmSave = new dhx.Form(null, {
+            rows: [
+                { cols: [
+                        {type: "containere", height: "content", width: 943, disabled: false, html: '<div class="title"><span class="popTitle">템플릿 상세</span></div>'},
+                        { cols: [
+                                {type: "button", id: "btnTestSend", text: "테스트 발송", view: "flat", color: "secondary", padding: 5, css: "normal-btn"},
+                                {type: "button", id: "btnSave", text: "저장", view: "flat", color: "secondary", padding: 5, css: "normal-btn"}
+                            ]
+                        }
+                    ],
+                    align: "left"
+                }
+            ],
+            css: "sub-title"
+        });
+        layoutMain.getCell("frmSave").attach(frmSave);
 
+        frmSave.getItem("btnTestSend").events.on("click", function(){
+            alert("테스트 발송");
+        });
 
+        frmTemplate = new dhx.Form(null, {
+            rows: [
+                {
+                    cols: [
+                        {type: "text", id: "ntftkTmpltChnlId", label: "@채널", labelPosition: "left", labelWidth: "200", width: "50%", gravity: true, readOnly: true},
+                        {type: "text", id: "ntftkMpnglId", label: "매핑ID", labelPosition: "left", labelWidth: "200", width: "40%", gravity: true, readOnly: true},
+                        {type: "button", id: "btnMapping", label: "매핑", view: "flat", color: "secondary", width: "10%", css: "btn-mapping"}
+                    ]
+                },
+                {
+                    cols: [
+                        {type: "text", id: "ntftkTmpltCode", label: "템플릿코드", labelPosition: "left", labelWidth: "200", width: "50%", gravity: true, readOnly: true},
+                        {type: "text", id: "ntftkTmpltTypeName", label: "템플릿유형", labelPosition: "left", labelWidth: "200", width: "50%", gravity: true, readOnly: true}
+                    ]
+                }
+
+            ],
+            css: "frequency-from"
+        });
+        layoutMain.getCell("frmTemplate").attach(frmTemplate);
 
     });
 </script>
